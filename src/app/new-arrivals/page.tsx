@@ -1,7 +1,7 @@
 import { Clock3, PackageCheck, Zap } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/components/product-data";
+import { newArrivalProducts } from "@/components/product-data";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -25,11 +25,8 @@ export default function NewArrivalsPage() {
           copy="A compact launch edit with race foam, daily response, and city silhouettes."
         />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {products.map((product, index) => (
-            <ProductCard
-              key={product.name}
-              product={{ ...product, badge: index === 3 ? "DROP" : product.badge }}
-            />
+          {newArrivalProducts.map((product) => (
+            <ProductCard key={product.name} product={product} />
           ))}
         </div>
         <div className="mt-14 grid gap-4 md:grid-cols-3">

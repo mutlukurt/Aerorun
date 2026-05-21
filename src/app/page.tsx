@@ -157,6 +157,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#050506] text-white">
+      <link rel="preload" as="image" href="/images/hero-athlete.webp" fetchPriority="high" />
       <SiteHeader />
 
       <section
@@ -210,6 +211,9 @@ export default function Home() {
               alt="AERORUN athlete wearing premium running sneakers in a dark urban training space"
               fill
               priority
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
               sizes="(max-width: 1024px) 100vw, 62vw"
               className="rounded-[36px] object-cover object-center opacity-95 shadow-[0_0_120px_rgba(255,255,255,0.08)] transition duration-700 hover:scale-[1.015]"
             />

@@ -5,6 +5,7 @@ import { Logo } from "./site-header";
 const footerColumns = [
   {
     title: "Catalog",
+    href: "/catalog",
     links: [
       ["All Sneakers", "/catalog#all-sneakers"],
       ["New Arrivals", "/new-arrivals#latest-drop"],
@@ -15,6 +16,7 @@ const footerColumns = [
   },
   {
     title: "Customer",
+    href: "/contact",
     links: [
       ["Delivery & Payment", "/contact#delivery-payment"],
       ["Returns", "/contact#returns"],
@@ -25,6 +27,7 @@ const footerColumns = [
   },
   {
     title: "Company",
+    href: "/about",
     links: [
       ["About", "/about#story"],
       ["Technology", "/about#technology"],
@@ -67,9 +70,12 @@ export function SiteFooter() {
         <div className="grid gap-8 sm:grid-cols-3">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-white">
+              <Link
+                href={column.href}
+                className="mb-4 block text-xs font-black uppercase tracking-[0.18em] text-white transition hover:text-zinc-300"
+              >
                 {column.title}
-              </h3>
+              </Link>
               <div className="grid gap-3">
                 {column.links.map(([label, href]) => (
                   <Link key={label} href={href} className="text-sm text-zinc-500 transition hover:text-white">

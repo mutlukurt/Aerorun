@@ -16,6 +16,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate overflow-hidden px-5 pt-28 md:px-8">
+      <link rel="preload" as="image" href={image} fetchPriority="high" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.12),transparent_26rem)]" />
       <div className="mx-auto grid min-h-[560px] max-w-[1500px] items-center gap-8 lg:grid-cols-[0.72fr_1.28fr]">
         <div className="relative z-10 py-12">
@@ -35,7 +36,17 @@ export function PageHero({
           </a>
         </div>
         <div className="relative min-h-[380px] overflow-hidden rounded-[36px] border border-white/10 bg-zinc-950 shadow-[0_0_120px_rgba(255,255,255,0.08)] lg:min-h-[520px]">
-          <Image src={image} alt="" fill priority sizes="(max-width: 1024px) 100vw, 64vw" className="object-cover" />
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            sizes="(max-width: 1024px) 100vw, 64vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-black/10" />
         </div>
       </div>

@@ -11,6 +11,7 @@ The design direction is luxury athletic retail: dark charcoal surfaces, large di
 - Presents a premium performance footwear brand landing page.
 - Provides dedicated pages for Catalog, Men, Women, New Arrivals, Collections, About, and Contact.
 - Uses local optimized WebP campaign and product images from `public/images`.
+- Preloads above-the-fold hero images with eager loading and high fetch priority.
 - Includes a functional frontend search modal for products.
 - Includes a cart drawer with add, remove, increment, decrement, clear cart, subtotal, and localStorage persistence.
 - Supports responsive desktop, tablet, and mobile layouts.
@@ -26,7 +27,9 @@ The design direction is luxury athletic retail: dark charcoal surfaces, large di
 - Dedicated catalog page with expanded product lineup.
 - Men and Women product edit pages.
 - New Arrivals product drop page.
+- Dedicated New Arrivals sneaker imagery, separate from the core catalog products.
 - Collections page for Running, Training, Lifestyle, and Basketball.
+- Dedicated Collections page campaign imagery, separate from the landing page cards.
 - About page with brand, technology, sustainability, blog, and careers anchors.
 - Contact page with support form and customer service sections.
 - Responsive mobile navigation with search/cart access.
@@ -43,6 +46,12 @@ The design direction is luxury athletic retail: dark charcoal surfaces, large di
 - **Simple Icons**: Social icons for Instagram, TikTok, and X.
 - **Sharp**: Image optimization/conversion workflow for local WebP assets.
 - **ESLint**: Code quality checks through the Next.js ESLint setup.
+
+## Image Performance
+
+All campaign and product assets are local WebP files. Above-the-fold hero images are explicitly preloaded and rendered with eager loading, high fetch priority, and synchronous decoding hints so the main editorial visuals are requested as early as possible during page load.
+
+The project also disables runtime image optimization for local images through `next.config.ts`, allowing the browser to request the already-optimized WebP files directly from `/public/images` instead of waiting for on-demand `_next/image` processing.
 
 ## Project Structure
 

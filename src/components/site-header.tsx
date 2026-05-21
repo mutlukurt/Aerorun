@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Menu, Minus, Plus, Search, ShoppingBag, Trash2, X } from "lucide-react";
 import { useState } from "react";
 import { useCommerce } from "./commerce-context";
-import { products } from "./product-data";
+import { allSearchProducts } from "./product-data";
 
 export const navItems = [
   { label: "Catalog", href: "/catalog" },
@@ -51,14 +51,14 @@ export function SiteHeader() {
     closeSearch,
   } = useCommerce();
 
-  const searchResults = products.filter((product) => {
+  const searchResults = allSearchProducts.filter((product) => {
     const haystack = `${product.name} ${product.subtitle} ${product.badge}`.toLowerCase();
     return haystack.includes(query.toLowerCase().trim());
   });
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-2xl">
+      <header id="top" className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-2xl">
         <nav className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 md:px-8">
           <Logo />
           <div className="hidden items-center gap-7 lg:flex">

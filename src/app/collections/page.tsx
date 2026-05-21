@@ -6,10 +6,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const collections = [
-  ["/images/collection-running.webp", Footprints, "Running", "Distance, pace, and late-night discipline."],
-  ["/images/collection-training.webp", Dumbbell, "Training", "Stability for power days and mixed sessions."],
-  ["/images/collection-lifestyle.webp", Sparkles, "Lifestyle", "Premium movement for the city between plans."],
-  ["/images/collection-basketball.webp", Gauge, "Basketball", "Impact support and court-ready lift."],
+  ["/images/collections-running.webp", Footprints, "Running", "Distance, pace, and late-night discipline."],
+  ["/images/collections-training.webp", Dumbbell, "Training", "Stability for power days and mixed sessions."],
+  ["/images/collections-lifestyle.webp", Sparkles, "Lifestyle", "Premium movement for the city between plans."],
+  ["/images/collections-basketball.webp", Gauge, "Basketball", "Impact support and court-ready lift."],
 ];
 
 export default function CollectionsPage() {
@@ -20,7 +20,7 @@ export default function CollectionsPage() {
         eyebrow="AERORUN Worlds"
         title="Collections"
         copy="Four movement systems, one performance language: cinematic, precise, and built for daily motion."
-        image="/images/banner-runner.webp"
+        image="/images/collections-hero.webp"
         cta="Explore Collections"
       />
       <section id="page-content" className="mx-auto max-w-[1500px] px-5 py-14 md:px-8">
