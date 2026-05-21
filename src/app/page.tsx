@@ -9,7 +9,7 @@ import {
   Footprints,
   Plus,
   ShieldCheck,
-  Sparkles,
+  Shirt,
   Timer,
   Zap,
 } from "lucide-react";
@@ -83,7 +83,7 @@ const collections = [
     title: "Lifestyle",
     subtitle: "Built for the pace between plans.",
     image: "/images/collection-lifestyle.webp",
-    icon: Sparkles,
+    icon: Shirt,
   },
   {
     title: "Basketball",

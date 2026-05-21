@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Dumbbell, Footprints, Gauge, Sparkles } from "lucide-react";
+import { Dumbbell, Footprints, Gauge, Shirt } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/site-header";
 const collections = [
   ["/images/collections-running.webp", Footprints, "Running", "Distance, pace, and late-night discipline."],
   ["/images/collections-training.webp", Dumbbell, "Training", "Stability for power days and mixed sessions."],
-  ["/images/collections-lifestyle.webp", Sparkles, "Lifestyle", "Premium movement for the city between plans."],
+  ["/images/collections-lifestyle.webp", Shirt, "Lifestyle", "Premium movement for the city between plans."],
   ["/images/collections-basketball.webp", Gauge, "Basketball", "Impact support and court-ready lift."],
 ];
 
