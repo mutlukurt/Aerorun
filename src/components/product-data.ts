@@ -68,4 +68,58 @@ export const newArrivalProducts: Product[] = [
   },
 ];
 
-export const allSearchProducts = [...products, ...newArrivalProducts];
+export const menProducts: Product[] = [
+  {
+    ...products[1],
+    badge: "TRAIN",
+    name: "AERORUN PULSE M",
+    subtitle: "Structured daily cushioning for heavier training blocks.",
+  },
+  {
+    ...products[2],
+    badge: "POWER",
+    name: "AERORUN APEX M",
+    subtitle: "Propulsive support for intervals, lifting days, and long routes.",
+  },
+  {
+    ...products[3],
+    badge: "CITY",
+    name: "AERORUN URBAN M",
+    subtitle: "Durable street comfort with a grounded performance stance.",
+  },
+  {
+    ...products[0],
+    badge: "RACE",
+    name: "AERORUN VELOCE M",
+    subtitle: "Race-day foam shaped for fast turnover and firm lockdown.",
+  },
+];
+
+export const womenProducts: Product[] = [
+  {
+    ...newArrivalProducts[0],
+    badge: "FLOW",
+    name: "AERORUN GLIDE W",
+    subtitle: "Light cushioning and smooth transitions for daily movement.",
+  },
+  {
+    ...newArrivalProducts[2],
+    badge: "LIFT",
+    name: "AERORUN LUMEN W",
+    subtitle: "Warm white energy return with a refined low-bulk profile.",
+  },
+  {
+    ...newArrivalProducts[1],
+    badge: "PACE",
+    name: "AERORUN STRATA W",
+    subtitle: "Graphite response with plated snap for tempo sessions.",
+  },
+  {
+    ...newArrivalProducts[3],
+    badge: "NIGHT",
+    name: "AERORUN NIGHT W",
+    subtitle: "Deep navy comfort for late training and city miles.",
+  },
+];
+
+export const allSearchProducts = [...products, ...newArrivalProducts, ...menProducts, ...womenProducts];

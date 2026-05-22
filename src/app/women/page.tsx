@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Activity, ShieldCheck, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/components/product-data";
+import { womenProducts } from "@/components/product-data";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -21,7 +21,7 @@ export default function WomenPage() {
       <section id="page-content" className="mx-auto max-w-[1500px] px-5 py-14 md:px-8">
         <SectionHeading eyebrow="Featured For Women" title="Light On Impact" />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {[products[0], products[2], products[1], products[3]].map((product) => (
+          {womenProducts.map((product) => (
             <ProductCard key={product.name} product={product} />
           ))}
         </div>

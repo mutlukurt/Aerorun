@@ -2,17 +2,41 @@ import Image from "next/image";
 import { SlidersHorizontal } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/components/product-data";
+import { newArrivalProducts, products } from "@/components/product-data";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const expandedProducts = [
   ...products,
-  { ...products[0], badge: "FAST", name: "AERORUN VELOCE X", price: "$219" },
-  { ...products[1], badge: "CORE", name: "AERORUN PULSE KNIT", price: "$179" },
-  { ...products[2], badge: "PRO", name: "AERORUN APEX CARBON", price: "$229" },
-  { ...products[3], badge: "CITY", name: "AERORUN URBAN LOW", price: "$149" },
+  {
+    ...products[0],
+    badge: "FAST",
+    name: "AERORUN VELOCE X",
+    price: "$219",
+    image: newArrivalProducts[0].image,
+  },
+  {
+    ...products[1],
+    badge: "CORE",
+    name: "AERORUN PULSE KNIT",
+    price: "$179",
+    image: newArrivalProducts[1].image,
+  },
+  {
+    ...products[2],
+    badge: "PRO",
+    name: "AERORUN APEX CARBON",
+    price: "$229",
+    image: newArrivalProducts[2].image,
+  },
+  {
+    ...products[3],
+    badge: "CITY",
+    name: "AERORUN URBAN LOW",
+    price: "$149",
+    image: newArrivalProducts[3].image,
+  },
 ];
 
 export default function CatalogPage() {

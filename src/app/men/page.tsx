@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Dumbbell, Footprints, Gauge } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/components/product-data";
+import { menProducts } from "@/components/product-data";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -21,7 +21,7 @@ export default function MenPage() {
       <section id="page-content" className="mx-auto max-w-[1500px] px-5 py-14 md:px-8">
         <SectionHeading eyebrow="Featured For Men" title="Built To Push" />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {[products[1], products[2], products[3], products[0]].map((product) => (
+          {menProducts.map((product) => (
             <ProductCard key={product.name} product={product} />
           ))}
         </div>
