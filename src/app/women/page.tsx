@@ -48,7 +48,7 @@ export default function WomenPage() {
             </div>
           </div>
           <div className="relative min-h-[360px] overflow-hidden rounded-[34px] border border-white/10">
-            <Image src="/images/collection-lifestyle.webp" alt="" fill sizes="60vw" className="object-cover" />
+            <Image src="/images/women-performance-editorial.webp" alt="" fill sizes="60vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
           </div>
         </div>
